@@ -1,0 +1,27 @@
+h1 {
+    color: orange;
+    text-shadow: 1px 1px 1px orange;
+}
+
+h2 {
+    color: white;
+    background: linear-gradient( to right,orange, #ffefaf);
+}
+
+div#zentai {
+    display: grid;
+    flex-direction: row;
+	grid-template-columns: 1fr;
+	grid-auto-rows: 170px;
+	grid-gap: 5px;
+	padding: 1px 200px 1px 1px;
+}
+
+div#zentai > div {
+    background-color: #fceeb2; 
+}
+
+a:hover {
+    text-decoration: none;
+    color: orange;
+}
