@@ -14,7 +14,7 @@ div#zentai {
 	grid-template-columns: 1fr;
 	grid-auto-rows: 170px;
 	grid-gap: 5px;
-	padding: 1px 200px 1px 1px;
+	padding: 1px 150px 1px 1px;
 }
 
 div#zentai > div {
