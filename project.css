@@ -1,0 +1,19 @@
+h1 {
+    color: black;
+    font-family: monospace;
+}
+
+h3 {
+    font-family: fantasy;
+	color: #3f3faf;
+	background: linear-gradient( to right, white, rgb(255, 240, 212) );
+}
+
+mark {
+    color: rgb(71, 71, 251);
+    background-color: rgb(255, 240, 212);
+}
+
+body {
+    background-color: rgb(250, 249, 222);
+}
