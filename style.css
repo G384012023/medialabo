@@ -15,10 +15,11 @@ b {
 	grid-auto-rows: 100px;
 	grid-gap: 5px;
 	padding: 1px 150px 1px 1px;
-    background-color: #fceeb2;
 }
 
-
+b {
+    background-color: #fceeb2;
+}
 
 a:hover {
     text-decoration: none;
