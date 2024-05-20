@@ -200,4 +200,14 @@ let data = {
 };
 
 /////////// 課題3-2 ここからプログラムを書こう
-
+for(let n of data.results.shop){
+  console.log(n.name)
+  console.log(n.access)
+  console.log(n.address)
+  console.log(n.budget.name)
+  console.log(n.catch)
+  console.log(n.genre.name)
+  console.log(n.open)
+  console.log(n.station_name)
+  console.log(n.sub_genre.name)
+}
