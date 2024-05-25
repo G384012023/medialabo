@@ -9,9 +9,6 @@ let kaisu = 0;
 // 将来以下の hantei(); の4回の呼び出しを全て削除する
 // 代わりにここでは，ボタンを押したら hantei() を呼び出すイベント処理をする
 hantei();
-hantei();
-hantei();
-hantei();
 
 // ボタンを押した後の処理をする関数 hantei() の定義
 function hantei() {
@@ -24,35 +21,30 @@ function hantei() {
   kaisu = kaisu + 1;
 
   let a = document.querySelector('span#kaisu')
-  let p1 = document.createElement('p1')
-  p1.textContent = kaisu
-  a.insertAdjacentElement('beforeend', p1)
+  a.textContent = kaisu
 
   let b = document.querySelector('span#answer')
-  let p2 = document.createElement('p2')
-  p2.textContent = yoso
-  b.insertAdjacentElement('beforeend', p2)
+  b.textContent = yoso
   
-  let p3 = document.createElement('p3')
+  
   let c = document.querySelector('p#result')
 
   if(kaisu < 3){
     if(kotae === yoso){
-        p3.textContent = ("正解です、おめでとう")
+        c.textContent = ("正解です、おめでとう")
         kaisu = kaisu + 3
     } else if (kotae > yoso){
-        p3.textContent = ("まちがい、答えはもっと大きいですよ")
+        c.textContent = ("まちがい、答えはもっと大きいですよ")
     } else if (kotae < yoso){
-        p3.textContent = ("まちがい、こたえは　もっと小さいですよ")
+        c.textContent = ("まちがい、こたえは　もっと小さいですよ")
     }
   } else if (kaisu === 3){
     if(kotae === yoso){
-        p3.textContent = ("正解です。おめでとう")
+        c.textContent = ("正解です。おめでとう")
     } else {
-        p3.textContent = ("まちがい、残念でした答えは" + kotae + "です。")
+        c.textContent = ("まちがい、残念でした答えは" + kotae + "です。")
     }
   } else {
-        p3.textContent = ("答えは" + kotae + "でした。すでにゲームは終わってます。")
+        c.textContent = ("答えは" + kotae + "でした。すでにゲームは終わってます。")
   }
-  c.insertAdjacentElement('beforeend', p3)
 }
