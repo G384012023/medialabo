@@ -257,9 +257,18 @@ for(let n of data.results.shop){
   ul.insertAdjacentElement('beforeend', p8)
   ul.insertAdjacentElement('beforeend', p9)
   p1.insertAdjacentElement('beforebegin', b)
-  console.log('a')
 
   kensu = kensu + 1;
+
+}
+
+let e = document.querySelector('#button')
+e.addEventListener('click', r);
+
+function r(){
+  let i = document.querySelector('input[name="kensaku"]');
+  let kensaku = i.value;
+  console.log(kensaku + 'の検索結果')
 
 }
 
