@@ -22,24 +22,37 @@ function hantei() {
   // kotae と yoso が一致するかどうか調べて結果を出力
   // 課題3-1における出力先はコンソール
   kaisu = kaisu + 1;
-  console.log("第" + kaisu + "回目の予想:" + yoso)
+
+  let a = document.querySelector('span#kaisu')
+  let p1 = document.createElement('p1')
+  p1.textContent = kaisu
+  a.insertAdjacentElement('beforeend', p1)
+
+  let b = document.querySelector('span#answer')
+  let p2 = document.createElement('p2')
+  p2.textContent = yoso
+  b.insertAdjacentElement('beforeend', p2)
   
+  let p3 = document.createElement('p3')
+  let c = document.querySelector('p#result')
+
   if(kaisu < 3){
     if(kotae === yoso){
-        console.log("正解です、おめでとう")
+        p3.textContent = ("正解です、おめでとう")
         kaisu = kaisu + 3
     } else if (kotae > yoso){
-        console.log("まちがい、答えはもっと大きいですよ")
+        p3.textContent = ("まちがい、答えはもっと大きいですよ")
     } else if (kotae < yoso){
-        console.log("まちがい、こたえは　もっと小さいですよ")
+        p3.textContent = ("まちがい、こたえは　もっと小さいですよ")
     }
   } else if (kaisu === 3){
     if(kotae === yoso){
-        console.log("正解です。おめでとう")
+        p3.textContent = ("正解です。おめでとう")
     } else {
-        console.log("まちがい、残念でした答えは" + kotae + "です。")
+        p3.textContent = ("まちがい、残念でした答えは" + kotae + "です。")
     }
   } else {
-    console.log("答えは" + kotae + "でした。すでにゲームは終わってます。")
+        p3.textContent = ("答えは" + kotae + "でした。すでにゲームは終わってます。")
   }
+  c.insertAdjacentElement('beforeend', p3)
 }

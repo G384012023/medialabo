@@ -200,14 +200,69 @@ let data = {
 };
 
 /////////// 課題3-2 ここからプログラムを書こう
+let a = document.querySelector('div#result')
+let p1 = document.createElement('p')
+let p2 = document.createElement('p')
+let p3 = document.createElement('p')
+let p4 = document.createElement('p')
+let p5 = document.createElement('p')
+let p6 = document.createElement('p')
+let p7 = document.createElement('p')
+let p8 = document.createElement('p')
+let p9 = document.createElement('p')
+
 for(let n of data.results.shop){
-  console.log(n.name)
-  console.log(n.access)
-  console.log(n.address)
-  console.log(n.budget.name)
-  console.log(n.catch)
-  console.log(n.genre.name)
-  console.log(n.open)
-  console.log(n.station_name)
-  console.log(n.sub_genre.name)
+  p1.textContent=n.name
+  p2.textContent=n.access
+  p3.textContent=n.address
+  p4.textContent=n.budget.name
+  p5.textContent=n.catch
+  p6.textContent=n.genre.name
+  p7.textContent=n.open
+  p8.textContent=n.station_name
+  p9.textContent=n.sub_genre.name
 }
+
+a.insertAdjacentElement('beforeend', p1)
+a.insertAdjacentElement('beforeend', p2)
+a.insertAdjacentElement('beforeend', p3)
+a.insertAdjacentElement('beforeend', p4)
+a.insertAdjacentElement('beforeend', p5)
+a.insertAdjacentElement('beforeend', p6)
+a.insertAdjacentElement('beforeend', p7)
+a.insertAdjacentElement('beforeend', p8)
+a.insertAdjacentElement('beforeend', p9)
+
+
+let b = document.querySelector('div#result')
+let p10 = document.createElement('p')
+let p11 = document.createElement('p')
+let p12 = document.createElement('p')
+let p13 = document.createElement('p')
+let p14 = document.createElement('p')
+let p15 = document.createElement('p')
+let p16 = document.createElement('p')
+let p17 = document.createElement('p')
+let p18 = document.createElement('p')
+
+for(let n of data.results.shop){
+  p10.textContent=n.name
+  p11.textContent=n.access
+  p12.textContent=n.address
+  p13.textContent=n.budget.name
+  p14.textContent=n.catch
+  p15.textContent=n.genre.name
+  p16.textContent=n.open
+  p17.textContent=n.station_name
+  p18.textContent=n.sub_genre.name
+}
+
+a.insertAdjacentElement('beforeend', p10)
+a.insertAdjacentElement('beforeend', p11)
+a.insertAdjacentElement('beforeend', p12)
+a.insertAdjacentElement('beforeend', p13)
+a.insertAdjacentElement('beforeend', p14)
+a.insertAdjacentElement('beforeend', p15)
+a.insertAdjacentElement('beforeend', p16)
+a.insertAdjacentElement('beforeend', p17)
+a.insertAdjacentElement('beforeend', p18)
