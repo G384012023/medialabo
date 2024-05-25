@@ -199,41 +199,28 @@ let data = {
   }
 };
 
-/////////// 課題3-2 ここからプログラムを書こう
-let a = document.querySelector('div#result')
-let ul1 = document.createElement("ul")
-//let ul2 = document.createElement("ul")
-let li1 = document.createElement("li")
-let li2 = document.createElement("li")
-
-ul1.insertAdjacentElement('beforeend', li1)
-ul1.insertAdjacentElement('beforeend', li2)
-a.insertAdjacentElement('beforeend', ul1)
-//a.insertAdjacentElement('beforeend', ul2)
+/////////// 課題3-2 ここからプログラムを書く
 
 
-let p1 = document.createElement('p')
-let p2 = document.createElement('p')
-let p3 = document.createElement('p')
-let p4 = document.createElement('p')
-let p5 = document.createElement('p')
-let p6 = document.createElement('p')
-let p7 = document.createElement('p')
-let p8 = document.createElement('p')
-let p9 = document.createElement('p')
 
-let p10 = document.createElement('p')
-let p11 = document.createElement('p')
-let p12 = document.createElement('p')
-let p13 = document.createElement('p')
-let p14 = document.createElement('p')
-let p15 = document.createElement('p')
-let p16 = document.createElement('p')
-let p17 = document.createElement('p')
-let p18 = document.createElement('p')
+
 
 
 let ul = document.querySelector('ul#ul')
+let li = document.createElement('li')
+let kensu = 1
+let h3 = document.querySelector("h3#h3")
+
+
+let a = document.createElement('h3')
+a.textContent = '検索結果1件目（検索結果は2件)'
+
+let b = document.createElement('h3')
+b.textContent = '検索結果2件目';
+
+let h4 = document.querySelector('h4#h4')
+
+
 for(let n of data.results.shop){
 
   let p1 = document.createElement('li')
@@ -246,7 +233,6 @@ for(let n of data.results.shop){
   let p8 = document.createElement('li')
   let p9 = document.createElement('li')
 
-  // console.log(n.access);
   p1.textContent=n.name
   p2.textContent=n.access
   p3.textContent=n.address
@@ -257,16 +243,10 @@ for(let n of data.results.shop){
   p8.textContent=n.station_name
   p9.textContent=n.sub_genre.name
 
-  // p10.textContent=n.name
-  // p11.textContent=n.access
-  // p12.textContent=n.address
-  // p13.textContent=n.budget.name
-  // p14.textContent=n.catch
-  // p15.textContent=n.genre.name
-  // p16.textContent=n.open
-  // p17.textContent=n.station_name
-  // p18.textContent=n.sub_genre.name
+  p5.classList.add('mark')
+  p1.classList.add('h4')
 
+  ul.insertAdjacentElement('afterbegin', a)
   ul.insertAdjacentElement('beforeend', p1)
   ul.insertAdjacentElement('beforeend', p2)
   ul.insertAdjacentElement('beforeend', p3)
@@ -276,42 +256,15 @@ for(let n of data.results.shop){
   ul.insertAdjacentElement('beforeend', p7)
   ul.insertAdjacentElement('beforeend', p8)
   ul.insertAdjacentElement('beforeend', p9)
+  p1.insertAdjacentElement('beforebegin', b)
+  console.log('a')
+
+  kensu = kensu + 1;
+
 }
 
-li1.insertAdjacentElement('beforeend', p1)
-li1.insertAdjacentElement('beforeend', p2)
-li1.insertAdjacentElement('beforeend', p3)
-li1.insertAdjacentElement('beforeend', p4)
-li1.insertAdjacentElement('beforeend', p5)
-li1.insertAdjacentElement('beforeend', p6)
-li1.insertAdjacentElement('beforeend', p7)
-li1.insertAdjacentElement('beforeend', p8)
-li1.insertAdjacentElement('beforeend', p9)
-
-
-///
 
 
 
 
-for(let l of data.results.shop){
-  p10.textContent=l.name
-  p11.textContent=l.access
-  p12.textContent=l.address
-  p13.textContent=l.budget.name
-  p14.textContent=l.catch
-  p15.textContent=l.genre.name
-  p16.textContent=l.open
-  p17.textContent=l.station_name
-  p18.textContent=l.sub_genre.name
-}
 
-a.insertAdjacentElement('beforeend', p10)
-a.insertAdjacentElement('beforeend', p11)
-a.insertAdjacentElement('beforeend', p12)
-a.insertAdjacentElement('beforeend', p13)
-a.insertAdjacentElement('beforeend', p14)
-a.insertAdjacentElement('beforeend', p15)
-a.insertAdjacentElement('beforeend', p16)
-a.insertAdjacentElement('beforeend', p17)
-a.insertAdjacentElement('beforeend', p18)

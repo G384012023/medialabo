@@ -9,11 +9,16 @@ h3 {
 	background: linear-gradient( to right, white, rgb(255, 240, 212) );
 }
 
-mark {
-    color: rgb(71, 71, 251);
+li.mark {
+    color: yellowgreen;
     background-color: rgb(255, 240, 212);
 }
 
 body {
     background-color: rgb(250, 249, 222);
+}
+
+li.h4{
+    font-weight: bold;
+    font-size: 120%;
 }
