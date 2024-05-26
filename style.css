@@ -8,6 +8,12 @@ h2 {
     background: linear-gradient( to right,orange, #ffefaf);
 }
 
+h3 {
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
 b {
     display: grid;
     flex-direction: row;
