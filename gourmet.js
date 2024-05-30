@@ -200,80 +200,84 @@ let data = {
 };
 
 /////////// 課題3-2 ここからプログラムを書く
+let t = document.querySelector('#sendRequest');
+t.addEventListener('click', sendRequest);
 
+function sendRequest(){
+  let url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G001.json';
 
+  axios.get(url).then(showResult).catch(showError).then(finish);
+}
 
+function showResult(resp){
+  let data = resp.data;
+  if(typeof data === 'string'){
+    data = JSON.parse(data);
+  }
 
+  let kensu = 1
+  for(let n of data.results.shop){
+    let p1 = document.createElement('li')
+    let p2 = document.createElement('li')
+    let p3 = document.createElement('li')
+    let p4 = document.createElement('li')
+    let p5 = document.createElement('li')
+    let p6 = document.createElement('li')
+    let p7 = document.createElement('li')
+    let p8 = document.createElement('li')
+    let p9 = document.createElement('li')
+    
+    p1.textContent=n.name
+    p2.textContent=n.access
+    p3.textContent=n.address
+    p4.textContent=n.budget.name
+    p5.textContent=n.catch
+    p6.textContent=n.genre.name
+    p7.textContent=n.open
+    p8.textContent=n.station_name
+    p9.textContent=n.sub_genre.name
+    
+    p5.classList.add('mark')
+    p1.classList.add('h4')
+    
+    ul.insertAdjacentElement('afterbegin', a)
+    ul.insertAdjacentElement('beforeend', p1)
+    ul.insertAdjacentElement('beforeend', p2)
+    ul.insertAdjacentElement('beforeend', p3)
+    ul.insertAdjacentElement('beforeend', p4)
+    ul.insertAdjacentElement('beforeend', p5)
+    ul.insertAdjacentElement('beforeend', p6)
+    ul.insertAdjacentElement('beforeend', p7)
+    ul.insertAdjacentElement('beforeend', p8)
+    ul.insertAdjacentElement('beforeend', p9)
+    //p1.insertAdjacentElement('beforebegin', b)
+    
+    kensu = kensu + 1;
+  }
+}
 
+function showError(err){
+  console.log(err);
+}
 
-let ul = document.querySelector('ul#ul')
-let li = document.createElement('li')
-let kensu = 1
-let h3 = document.querySelector("h3#h3")
-
+function finish(){
+  console.log('Ajax 通信が終わりました。')
+}
 
 let a = document.createElement('h3')
-a.textContent = '検索結果1件目（検索結果は2件)'
+a.textContent = '検索結果'
 
-let b = document.createElement('h3')
-b.textContent = '検索結果2件目';
+//let b = document.createElement('h3')
+//b.textContent = '検索結果2件目';
 
-let h4 = document.querySelector('h4#h4')
+//let u = document.querySelector('#answer');
+//u.addEventListener('click', printAnswer);
 
-
-for(let n of data.results.shop){
-
-  let p1 = document.createElement('li')
-  let p2 = document.createElement('li')
-  let p3 = document.createElement('li')
-  let p4 = document.createElement('li')
-  let p5 = document.createElement('li')
-  let p6 = document.createElement('li')
-  let p7 = document.createElement('li')
-  let p8 = document.createElement('li')
-  let p9 = document.createElement('li')
-
-  p1.textContent=n.name
-  p2.textContent=n.access
-  p3.textContent=n.address
-  p4.textContent=n.budget.name
-  p5.textContent=n.catch
-  p6.textContent=n.genre.name
-  p7.textContent=n.open
-  p8.textContent=n.station_name
-  p9.textContent=n.sub_genre.name
-
-  p5.classList.add('mark')
-  p1.classList.add('h4')
-
-  ul.insertAdjacentElement('afterbegin', a)
-  ul.insertAdjacentElement('beforeend', p1)
-  ul.insertAdjacentElement('beforeend', p2)
-  ul.insertAdjacentElement('beforeend', p3)
-  ul.insertAdjacentElement('beforeend', p4)
-  ul.insertAdjacentElement('beforeend', p5)
-  ul.insertAdjacentElement('beforeend', p6)
-  ul.insertAdjacentElement('beforeend', p7)
-  ul.insertAdjacentElement('beforeend', p8)
-  ul.insertAdjacentElement('beforeend', p9)
-  p1.insertAdjacentElement('beforebegin', b)
-
-  kensu = kensu + 1;
-
+function printAnswer(data){
+  let rs = document.querySelectorAll('input[name="kensaku"]');
+  for(let r of rs){
+    if(r.checked){
+      console.log(r.value);
+    }
+  }
 }
-
-let e = document.querySelector('#button')
-e.addEventListener('click', r);
-
-function r(){
-  let i = document.querySelector('input[name="kensaku"]');
-  let kensaku = i.value;
-  console.log(kensaku + 'の検索結果')
-
-}
-
-
-
-
-
-
