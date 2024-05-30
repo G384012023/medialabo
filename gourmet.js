@@ -204,9 +204,24 @@ let t = document.querySelector('#sendRequest');
 t.addEventListener('click', sendRequest);
 
 function sendRequest(){
-  let url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G001.json';
+
+  //function printAnswer(){
+    let rs = document.querySelectorAll('input[name="kensaku"]');
+    for(let r of rs){
+      if(r.checked){
+        console.log(r.value);
+        let u = r.value
+
+        let url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/' + u + '.json';
 
   axios.get(url).then(showResult).catch(showError).then(finish);
+      }
+    }
+  //}
+
+  //let url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G009.json';
+
+  //axios.get(url).then(showResult).catch(showError).then(finish);
 }
 
 function showResult(resp){
@@ -215,7 +230,7 @@ function showResult(resp){
     data = JSON.parse(data);
   }
 
-  let kensu = 1
+  //let kensu = 1
   for(let n of data.results.shop){
     let p1 = document.createElement('li')
     let p2 = document.createElement('li')
@@ -225,7 +240,7 @@ function showResult(resp){
     let p6 = document.createElement('li')
     let p7 = document.createElement('li')
     let p8 = document.createElement('li')
-    let p9 = document.createElement('li')
+    //let p9 = document.createElement('li')
     
     p1.textContent=n.name
     p2.textContent=n.access
@@ -235,7 +250,7 @@ function showResult(resp){
     p6.textContent=n.genre.name
     p7.textContent=n.open
     p8.textContent=n.station_name
-    p9.textContent=n.sub_genre.name
+    //p9.textContent=n.sub_genre.name
     
     p5.classList.add('mark')
     p1.classList.add('h4')
@@ -249,10 +264,10 @@ function showResult(resp){
     ul.insertAdjacentElement('beforeend', p6)
     ul.insertAdjacentElement('beforeend', p7)
     ul.insertAdjacentElement('beforeend', p8)
-    ul.insertAdjacentElement('beforeend', p9)
+    //ul.insertAdjacentElement('beforeend', p9)
     //p1.insertAdjacentElement('beforebegin', b)
     
-    kensu = kensu + 1;
+    //kensu = kensu + 1;
   }
 }
 
