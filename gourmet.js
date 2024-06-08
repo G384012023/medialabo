@@ -233,16 +233,18 @@ function showResult(resp){
   //let kensu = 1
   for(let n of data.results.shop){
     let p1 = document.createElement('li')
-    let p2 = document.createElement('li')
-    let p3 = document.createElement('li')
-    let p4 = document.createElement('li')
-    let p5 = document.createElement('li')
-    let p6 = document.createElement('li')
-    let p7 = document.createElement('li')
-    let p8 = document.createElement('li')
+    let p11 = document.createElement('p')
+    let p2 = document.createElement('p')
+    let p3 = document.createElement('p')
+    let p4 = document.createElement('p')
+    let p5 = document.createElement('p')
+    let p6 = document.createElement('p')
+    let p7 = document.createElement('p')
+    let p8 = document.createElement('p')
     //let p9 = document.createElement('li')
     
     p1.textContent=n.name
+    p11.textContent=n.name
     p2.textContent=n.access
     p3.textContent=n.address
     p4.textContent=n.budget.name
@@ -255,15 +257,18 @@ function showResult(resp){
     p5.classList.add('mark')
     p1.classList.add('h4')
     
-    ul.insertAdjacentElement('afterbegin', a)
-    ul.insertAdjacentElement('beforeend', p1)
-    ul.insertAdjacentElement('beforeend', p2)
-    ul.insertAdjacentElement('beforeend', p3)
-    ul.insertAdjacentElement('beforeend', p4)
-    ul.insertAdjacentElement('beforeend', p5)
-    ul.insertAdjacentElement('beforeend', p6)
-    ul.insertAdjacentElement('beforeend', p7)
-    ul.insertAdjacentElement('beforeend', p8)
+    o.insertAdjacentElement('afterbegin', a)
+    h6.insertAdjacentElement('beforeend', z)
+    h5.insertAdjacentElement('beforeend', p11)
+
+    o.insertAdjacentElement('beforeend', p1)
+    o.insertAdjacentElement('beforeend', p2)
+    o.insertAdjacentElement('beforeend', p3)
+    o.insertAdjacentElement('beforeend', p4)
+    o.insertAdjacentElement('beforeend', p5)
+    o.insertAdjacentElement('beforeend', p6)
+    o.insertAdjacentElement('beforeend', p7)
+    o.insertAdjacentElement('beforeend', p8)
     //ul.insertAdjacentElement('beforeend', p9)
     //p1.insertAdjacentElement('beforebegin', b)
     
@@ -279,14 +284,19 @@ function finish(){
   console.log('Ajax 通信が終わりました。')
 }
 
+let h1 = document.querySelector('h1')
+h1.textContent = 'グルメ情報'
+//h1.insertAdjacentElement('afterend', h1)
+
+let p12 = document.querySelector('p12')
+p12.textContent = 'ジャンルを選択'
+//p12.insertAdjacentElement('afterend', p12)
+
+let z = document.createElement('h6')
+z.textContent = '検索結果'
+
 let a = document.createElement('h3')
-a.textContent = '検索結果'
-
-//let b = document.createElement('h3')
-//b.textContent = '検索結果2件目';
-
-//let u = document.querySelector('#answer');
-//u.addEventListener('click', printAnswer);
+a.textContent = '各店舗詳細'
 
 function printAnswer(data){
   let rs = document.querySelectorAll('input[name="kensaku"]');
@@ -296,3 +306,4 @@ function printAnswer(data){
     }
   }
 }
+

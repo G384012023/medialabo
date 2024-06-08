@@ -22,3 +22,14 @@ li.h4{
     font-weight: bold;
     font-size: 120%;
 }
+
+h6 {
+    font-family: fantasy;
+	color: #3f3faf;
+	background: linear-gradient( to right, white, rgb(255, 240, 212) );
+    font-size: large;
+}
+
+h5 {
+    font-size: medium;
+}
