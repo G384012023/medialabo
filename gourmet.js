@@ -203,36 +203,45 @@ let data = {
 let t = document.querySelector('#sendRequest');
 t.addEventListener('click', sendRequest);
 
+
 function sendRequest(){
+  let rs = document.querySelectorAll('input[name="kensaku"]');
+  for(let r of rs){
+    if(r.checked){
+      console.log(r.value);
+      let u = r.value
 
-  //function printAnswer(){
-    let rs = document.querySelectorAll('input[name="kensaku"]');
-    for(let r of rs){
-      if(r.checked){
-        console.log(r.value);
-        let u = r.value
-
-        let url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/' + u + '.json';
-
-  axios.get(url).then(showResult).catch(showError).then(finish);
-      }
+      let url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/' + u + '.json';
+      axios.get(url).then(showResult).catch(showError).then(finish);
     }
-  //}
-
-  //let url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G009.json';
-
-  //axios.get(url).then(showResult).catch(showError).then(finish);
+  }
 }
 
+
+let h1 = document.querySelector('h1')
+  h1.textContent = 'グルメ情報'
+  
+  let p12 = document.querySelector('p12')
+  p12.textContent = 'ジャンルを選択してください。新しく検索するごとにreloadボタンを押してください。reloadをしないと検索できません。'
+  
+  let z = document.createElement('h6')
+  z.textContent = '検索結果'
+  
+  let a = document.createElement('h3')
+  a.textContent = '各店舗詳細'
+
+let kaisu = 0
 function showResult(resp){
+  
   let data = resp.data;
   if(typeof data === 'string'){
     data = JSON.parse(data);
   }
 
-  //let kensu = 1
+
   for(let n of data.results.shop){
-    let p1 = document.createElement('li')
+
+    let p1 = document.createElement('p')
     let p11 = document.createElement('p')
     let p2 = document.createElement('p')
     let p3 = document.createElement('p')
@@ -241,8 +250,7 @@ function showResult(resp){
     let p6 = document.createElement('p')
     let p7 = document.createElement('p')
     let p8 = document.createElement('p')
-    //let p9 = document.createElement('li')
-    
+  
     p1.textContent=n.name
     p11.textContent=n.name
     p2.textContent=n.access
@@ -252,11 +260,10 @@ function showResult(resp){
     p6.textContent=n.genre.name
     p7.textContent=n.open
     p8.textContent=n.station_name
-    //p9.textContent=n.sub_genre.name
     
     p5.classList.add('mark')
     p1.classList.add('h4')
-    
+
     o.insertAdjacentElement('afterbegin', a)
     h6.insertAdjacentElement('beforeend', z)
     h5.insertAdjacentElement('beforeend', p11)
@@ -268,12 +275,9 @@ function showResult(resp){
     o.insertAdjacentElement('beforeend', p5)
     o.insertAdjacentElement('beforeend', p6)
     o.insertAdjacentElement('beforeend', p7)
-    o.insertAdjacentElement('beforeend', p8)
-    //ul.insertAdjacentElement('beforeend', p9)
-    //p1.insertAdjacentElement('beforebegin', b)
     
-    //kensu = kensu + 1;
   }
+
 }
 
 function showError(err){
@@ -284,26 +288,11 @@ function finish(){
   console.log('Ajax 通信が終わりました。')
 }
 
-let h1 = document.querySelector('h1')
-h1.textContent = 'グルメ情報'
-//h1.insertAdjacentElement('afterend', h1)
+let btnReload = document.getElementById('reload');
+btnReload.addEventListener('click', function(){
+    location.reload();
+});
 
-let p12 = document.querySelector('p12')
-p12.textContent = 'ジャンルを選択'
-//p12.insertAdjacentElement('afterend', p12)
 
-let z = document.createElement('h6')
-z.textContent = '検索結果'
 
-let a = document.createElement('h3')
-a.textContent = '各店舗詳細'
-
-function printAnswer(data){
-  let rs = document.querySelectorAll('input[name="kensaku"]');
-  for(let r of rs){
-    if(r.checked){
-      console.log(r.value);
-    }
-  }
-}
 

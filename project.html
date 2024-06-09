@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head>
+    <meta>
         <meta charset="utf-8">
         <title>project</title>
         <link rel="stylesheet" href="project.css">
@@ -14,67 +14,69 @@
         <h1 id="h1"></h1>
         <p12 id ="p12"></p12>
         <p>
-            <input type="radio" name="kensaku" id="G001" value="G001">
+            <form id="box">
+            <input type="checkbox" name="kensaku" id="G001" value="G001">
             <label for="G001">居酒屋</label>
 
-            <input type="radio" name="kensaku" id="G003" value="G003">
+            <input type="checkbox" name="kensaku" id="G003" value="G003">
             <label for="G003">創作料理</label>
 
-            <input type="radio" name="kensaku" id="G004" value="G004">
+            <input type="checkbox" name="kensaku" id="G004" value="G004">
             <label for="G004">和食</label>
 
-            <input type="radio" name="kensaku" id="G005" value="G005">
+            <input type="checkbox" name="kensaku" id="G005" value="G005">
             <label for="G005">洋食</label>
 
-            <input type="radio" name="kensaku" id="G006" value="G006">
+            <input type="checkbox" name="kensaku" id="G006" value="G006">
             <label for="G006">イタリアン・フレンチ</label>
 
-            <input type="radio" name="kensaku" id="G007" value="G007">
+            <input type="checkbox" name="kensaku" id="G007" value="G007">
             <label for="G007">中華</label>
 
-            <input type="radio" name="kensaku" id="G008" value="G008">
+            <input type="checkbox" name="kensaku" id="G008" value="G008">
             <label for="G008">焼肉</label>
 
-            <input type="radio" name="kensaku" id="G009" value="G009">
+            <input type="checkbox" name="kensaku" id="G009" value="G009">
             <label for="G009">アジア料理</label>
 
-            <input type="radio" name="kensaku" id="G010" value="G010">
+            <input type="checkbox" name="kensaku" id="G010" value="G010">
             <label for="G010">各国料理</label>
 
-            <input type="radio" name="kensaku" id="G011" value="G011">
+            <input type="checkbox" name="kensaku" id="G011" value="G011">
             <label for="G011">カラオケ・パーティ</label>
 
-            <input type="radio" name="kensaku" id="G012" value="G012">
+            <input type="checkbox" name="kensaku" id="G012" value="G012">
             <label for="G012">バー・カクテル</label>
 
-            <input type="radio" name="kensaku" id="G013" value="G013">
+            <input type="checkbox" name="kensaku" id="G013" value="G013">
             <label for="G013">ラーメン</label>
 
-            <input type="radio" name="kensaku" id="G014" value="G014">
+            <input type="checkbox" name="kensaku" id="G014" value="G014">
             <label for="G014">カフェ</label>
 
-            <input type="radio" name="kensaku" id="G016" value="G016">
+            <input type="checkbox" name="kensaku" id="G016" value="G016">
             <label for="G016">お好み焼き</label>
 
-            <input type="radio" name="kensaku" id="G017" value="G017">
+            <input type="checkbox" name="kensaku" id="G017" value="G017">
             <label for="G017">韓国料理</label>
+            </form>
         </p>
-        <button id="sendRequest">検索</button>
-        <!--<p><button id="answer">検索する</button></p>-->
+        <!--<button id="sendRequest">検索</button>-->
+        <input type="button" value="検索" id="sendRequest" onclick="disabled = true;">
+        <input type="button" value="reload" id="reload">
         <h6 id="h6"></h6>
         <h5 id="h5"></h5>
-
         <h3 id="h3"></h3>
         <h4 id="h4"></h4>
         <ul id="ul"></ul>
         <o id="o"></o>
 
-        <form method="get">
+        <!--<form method="get">
             <label>
                 <input name="submitted-name" autocomplete="name" />
             </label>
             <button>検索</button>    
 
-        </form>
+        </form>-->
     </body>
 </html>
