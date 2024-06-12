@@ -222,7 +222,7 @@ let h1 = document.querySelector('h1')
   h1.textContent = 'グルメ情報'
   
   let p12 = document.querySelector('p12')
-  p12.textContent = 'ジャンルを選択してください。新しく検索するごとにreloadボタンを押してください。reloadをしないと検索できません。'
+  p12.textContent = 'ジャンルを選択してください。新しく検索するごとにreloadボタンを押してください。'
   
   let z = document.createElement('h6')
   z.textContent = '検索結果'
