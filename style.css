@@ -20,13 +20,15 @@ b {
 	grid-template-columns: 1fr;
 	grid-auto-rows: 60px;
 	grid-gap: 0px;
-	
-}
-
-b {
     background-color: #fceeb2;
     padding: 10px 10px 10px 10px;
     height: 190px;
+    background-size: auto;
+}
+
+kansou {
+    background-color: orange;
+    padding: 10px 10px 300px 10px;
 }
 
 a:hover {
