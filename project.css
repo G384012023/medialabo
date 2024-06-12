@@ -12,7 +12,8 @@ h3 {
 
 p.mark {
     color: yellowgreen;
-    background-color: rgb(255, 240, 212);
+    background: linear-gradient(to right,rgb(255, 240, 212), rgb(250, 249, 222));
+    font-size: 110%;
 }
 
 body {
@@ -21,7 +22,9 @@ body {
 
 p.h4{
     font-weight: bold;
-    font-size: 130%;
+    font-size: 155%;
+    background: linear-gradient(transparent 60%, rgb(253, 208, 123) 30%);
+    display: inline-block;
 }
 
 h6 {
